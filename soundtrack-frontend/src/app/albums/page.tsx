@@ -1,5 +1,6 @@
+'use client';
 import React from 'react';
-import AlbumList from '../components/AlbumList';
+import AlbumList from '../../components/AlbumList';
 
 const AlbumsPage: React.FC = () => {
   return (
