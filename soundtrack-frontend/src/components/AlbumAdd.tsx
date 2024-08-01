@@ -39,8 +39,9 @@ const AddAlbum: React.FC = () => {
             id="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            className="input-text mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="input-text mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required
+            placeholder="Título"
           />
         </div>
         <div className="mb-4">
@@ -50,7 +51,7 @@ const AddAlbum: React.FC = () => {
             id="artist"
             value={artist}
             onChange={(e) => setArtist(e.target.value)}
-            className="input-text mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm "
+            className="input-text mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm "
             required
             placeholder='Tião Carreiro e Pardinho'
           />
@@ -62,7 +63,7 @@ const AddAlbum: React.FC = () => {
             id="releaseDate"
             value={releaseDate}
             onChange={(e) => setReleaseDate(e.target.value)}
-            className="input-text mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+            className="input-text mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
             required
           />
         </div>

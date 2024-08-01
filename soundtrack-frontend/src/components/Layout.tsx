@@ -1,4 +1,5 @@
 import React from 'react';
+import '@/styles/albumAdd.css';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -16,6 +17,21 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </li>
             <li>
               <a href="/albums/add" className="text-blue-400 hover:underline">Adicionar Álbum</a>
+            </li>
+
+          </ul>
+          <br />
+          <h2 className="text-xl font-semibold">Faixas Menu</h2>
+          <ul>
+            <li>
+              <a href="/faixas" className="text-blue-400 hover:underline">Listar/Excluir</a>
+            </li>
+            <li>
+              <a href="/faixas/search" className="text-blue-400 hover:underline">Pesquisa Contendo</a>
+            </li>
+            <li>
+              <a href="/faixas/add/" className="text-blue-400 hover:underline">Adicionar Faixa</a>
+              
             </li>
           </ul>
         </div>
