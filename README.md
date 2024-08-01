@@ -1,6 +1,6 @@
 # musical-management
 
-Este projeto é uma aplicação web para gerenciar a discografia da dupla Tião Carreiro e Pardinho. Os usuários podem visualizar, pesquisar, adicionar e excluir álbuns e faixas. O frontend é construído com Next.js, React e TypeScript, e se comunica com um backend PHP Laravel via APIs RESTful.
+Este projeto é uma aplicação web para gerenciar uma discografia. Os usuários podem visualizar, pesquisar, adicionar e excluir álbuns e faixas. O frontend é construído com Next.js, React e TypeScript, e se comunica com um backend PHP Laravel via APIs RESTful.
 
 ## Índice
 
@@ -8,8 +8,6 @@ Este projeto é uma aplicação web para gerenciar a discografia da dupla Tião 
 - [Instalação](#instalação)
 - [Uso](#uso)
 - [Endpoints da API](#endpoints-da-api)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Contribuindo](#contribuindo)
 - [Licença](#licença)
 
 ## Recursos
@@ -84,21 +82,21 @@ Este projeto é uma aplicação web para gerenciar a discografia da dupla Tião 
    ```bash
    npm run dev
 
-## Uso
+### Uso
 
 1. Abra o navegador e navegue até http://localhost:3000 para o frontend.
 2. A API do backend está acessível em http://localhost:8000/api.
 
-### Endpoints da API
+## Endpoints da API
 
-## Álbuns
+### Álbuns
 
 - GET /api/albums: Lista todos os álbuns
 - POST /api/albums: Cria um novo álbum
 - GET api/albums/search: Obtém lista de álbuns baseado em critério de pesquisa, a entrada do dado precisa conter em algum lugar no título do álbum.
 - DELETE /api/albums/{album}: Exclui um álbum específico
 
-## Faixas
+### Faixas
 
 - GET /api/albums/{album}/faixas: Lista todas as faixas de um álbum específico
 - POST /api/albums/{album}/faixas: Cria uma nova faixa em um álbum específico
