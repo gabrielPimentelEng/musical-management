@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-interface Album {
+interface Faixa {
   id: number;
   title: string;
+  albumId: number;
 }
 
-interface AlbumDeleteProps {
-  album: Album;
-  onDelete: () => void; // Callback to refresh or update the album list
+interface FaixaDeleteProps {
+  faixa: Faixa;
+  onDelete: () => void; // Callback to refresh or update the faixa list
 }
 
-const AlbumDelete: React.FC<AlbumDeleteProps> = ({ album, onDelete }) => {
+const FaixaDelete: React.FC<FaixaDeleteProps> = ({ faixa, onDelete }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -20,10 +21,10 @@ const AlbumDelete: React.FC<AlbumDeleteProps> = ({ album, onDelete }) => {
     setError(null);
 
     try {
-      await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/albums/${album.id}`);
+      await axios.delete(`${process.env.NEXT_PUBLIC_API_URL}/albums/${faixa.albumId}/faixas/${faixa.id}`);
       onDelete(); // Notify parent to refresh the list
     } catch (err) {
-      setError('Failed to delete album');
+      setError('Failed to delete faixa');
       console.error(err);
     } finally {
       setIsDeleting(false);
@@ -32,8 +33,8 @@ const AlbumDelete: React.FC<AlbumDeleteProps> = ({ album, onDelete }) => {
 
   return (
     <div className="p-4 border border-red-300 rounded-md">
-      <h2 className="text-lg font-semibold">Excluir Album</h2>
-      <p className="mt-2">Tem certeza que deseja excluir o album "{album.title}"?</p>
+      <h2 className="text-lg font-semibold">Excluir Faixa</h2>
+      <p className="mt-2">Tem certeza que deseja excluir a faixa "{faixa.title}"?</p>
       <div className="mt-4 flex space-x-2">
         <button
           onClick={handleDelete}
@@ -54,4 +55,4 @@ const AlbumDelete: React.FC<AlbumDeleteProps> = ({ album, onDelete }) => {
   );
 };
 
-export default AlbumDelete;
+export default FaixaDelete;
